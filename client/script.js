@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const loadDataButton = document.getElementById("load-data-button");
 
   loadDataButton.addEventListener("click", function () {
-    fetch("http:///127.0.0.1:8000/api/customers")
+    fetch("http://127.0.0.1:8000/api/customers")
       .then((response) => response.json())
       .then((data) => {
         const tbody = document.querySelector("#data tbody");
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           // Create a row for the customer
           tbody.innerHTML += `
-              <tr class="border-b ${rowClass}">
+              <tr class="border-b ${rowClass} drop-shadow-lg">
                 <td class=" font-bold py-3 px-6">${item.first_name} ${item.last_name}</td>
                 <td class="py-3 px-6">${item.points}</td>
                 <td class="py-3 px-6">${item.customer_id}</td>
