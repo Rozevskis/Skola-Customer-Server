@@ -18,8 +18,8 @@
                 <thead>
                     <tr class="bg-gray-200 text-gray-700 uppercase text-sm leading-normal">
                         <th class="py-3 px-6 text-left">Name</th>
-                        <th class="py-3 px-6 text-left">Age</th>
-                        <th class="py-3 px-6 text-left">Email</th>
+                        <th class="py-3 px-6 text-left">Points</th>
+                        <th class="py-3 px-6 text-left">Customer ID</th>
                         <th class="py-3 px-6 text-left">Location</th>
                     </tr>
                 </thead>
@@ -28,6 +28,8 @@
                 </tbody>
             </table>
         </div>
+
+       
     </div>
 
     <script src="script.js"></script>
