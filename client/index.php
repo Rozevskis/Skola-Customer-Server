@@ -9,8 +9,10 @@
 </head>
 <body class="bg-gray-100 text-gray-800">
     <div class="container mx-auto p-6">
-        <h1 class="text-3xl font-bold mb-4">JSON Client-Server example</h1>
+        <h1 class="text-3xl font-bold mb-4">JSON Client-Server Example</h1>
 
+        <button id="load-data-button" type="button" class="m-2 p-3 rounded bg-blue-100 hover:bg-blue-50">Load data</button>
+        
         <div class="overflow-x-auto">
             <table id="data" class="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
                 <thead>
@@ -28,32 +30,6 @@
         </div>
     </div>
 
-    <script>
-        $(document).ready(function() {
-            $.ajax({
-                url: 'http://localhost:8002/',
-                type: 'GET',
-                success: function(response) {
-                    $('#data tbody').empty();
-
-                    response.data.forEach(function(item, index) {
-                        const rowClass = index % 2 === 0 ? 'bg-white hover:bg-gray-100' : 'bg-blue-50 hover:bg-blue-100'; // Even rows will have a white background, odd rows blue
-                        $('#data tbody').append(`
-                            <tr class="border-b ${rowClass}">
-                                <td class="py-3 px-6">${item.name}</td>
-                                <td class="py-3 px-6">${item.age}</td>
-                                <td class="py-3 px-6">${item.email}</td>
-                                <td class="py-3 px-6">${item.location}</td>
-                            </tr>
-                        `);
-                    });
-
-                },
-                error: function(xhr, status, error) {
-                    console.log("Error occurred: " + error);
-                }
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
